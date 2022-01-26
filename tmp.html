@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빽다방</title>
+    <style>
+        *{box-sizing:border-box;margin: 0;padding:0;}
+        img{width:100%;vertical-align:top;}
+        .container{
+            margin:0 16px;           
+        }
+        /* flex */
+        .flex-container{
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:space-between;            
+        }
+        .flex-container section{
+            width:100%;
+            margin-bottom:10px;
+        }
+        .flex-container section.main-slider{
+            margin-bottom:0;
+        }
+        .flex-container section.coffee-story{
+            height:30vw;
+            margin-bottom:5px;
+            position:relative;
+            overflow: hidden;
+        }
+        .flex-container section.coffee-story img{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            width:auto;
+            height:100%;
+        }
+        .fran-STORE{
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:space-between;
+        }
+        .fran-STORE article{
+            width:calc(50% - 5px);
+            border:1px solid black;
+        }
+
+        section.pos-re{
+            position:relative;
+        }
+        .contents{
+            position:absolute;
+            left:10px;
+            right:10px;
+            top:10px;
+            bottom:10px;
+            display:flex;
+            flex-flow:column nowrap;
+            justify-content: space-between;
+        }
+        .contents .btn-box{
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            background-color:black;
+            align-self:flex-end;
+        }
+        .contents h2{
+            margin-bottom:5px;
+        }
+
+        @media (min-width:768px){
+            .flex-container section.fresh-coffee,
+            .flex-container section.BEVERAGE{
+                width:calc(50% - 5px);
+            }
+            .flex-container section.CCINO{
+                width:calc(33.33333333333333% - 5px);
+            }
+            .flex-container section.DESSERT{
+                width:calc(66.66666666666667% - 5px);
+            }
+            .flex-container section.fran-STORE{
+                width:calc(66.66666666666667% - 5px);
+            }
+
+            .flex-container section.SNS{
+                width:calc(33.33333333333333% - 5px);
+            }
+            .fran-STORE article{
+                width:100%;
+            }
+            .fran-STORE article:first-child{
+                margin-bottom:10px;
+            }
+            .contents .btn-box{
+                align-self:flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="container">HEADER</div>            
+        </header>
+        <main>
+            <div class="container">
+                <div class="flex-container grid-container">
+                    <section class="main-slider">
+                        <img src="./images/mmain-banner01.jpg" alt="banner">
+                    </section>
+                    <section class="coffee-story">
+                        <img src="./images/main_sec1.jpg" alt="">
+                    </section>
+                    <section class="fresh-coffee pos-re">
+                        <img src="./images/mmain_sec2.jpg" alt="">
+                        <div class="contents">
+                            <div class="txt-box">
+                                <h2>제목</h2>
+                                <p>내용</p>
+                            </div>
+                            <div class="btn-box">
+                                <div class="btn-rotate"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="BEVERAGE  pos-re">
+                        <img src="./images/mmain_sec3.jpg" alt="">
+                        <div class="contents">
+                            <div class="txt-box">
+                                <h2>제목</h2>
+                                <p>내용</p>
+                            </div>
+                            <div class="btn-box">
+                                <div class="btn-rotate"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="CCINO  pos-re">
+                        <img src="./images/mmain_sec4.jpg" alt="">
+                        <div class="contents">
+                            <div class="txt-box">
+                                <h2>제목</h2>
+                                <p>내용</p>
+                            </div>
+                            <div class="btn-box">
+                                <div class="btn-rotate"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="DESSERT  pos-re">
+                        <img src="./images/mmain_sec5.jpg" alt="">
+                        <div class="contents">
+                            <div class="txt-box">
+                                <h2>제목</h2>
+                                <p>내용</p>
+                            </div>
+                            <div class="btn-box">
+                                <div class="btn-rotate"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="fran-STORE">
+                        <article>
+                            FRAN
+                        </article>
+                        <article>
+                            STORE
+                        </article>
+                    </section>
+                    <section class="SNS">
+                        SNS
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">FOOTER</div>            
+        </footer>
+    </div>
+</body>
+</html>
