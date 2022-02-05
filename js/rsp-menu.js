@@ -10,4 +10,4 @@ $('.main-nav>li').on({
         $('.main-nav>li').not($(this)).removeClass('active');
         $(this).toggleClass('active');
     }
-}); 
+});
